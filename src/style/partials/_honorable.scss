@@ -1,0 +1,79 @@
+.honorable {
+  padding: 45px;
+  // background-image: url('/images/Circle.svg'), url('/images/Circle.svg');
+  background-repeat: no-repeat;
+  background-position: -50px -85px, calc(100% + 100px) calc(100% + 110px);
+  background-size: 150px, 225px;
+  // background-color: rgb(73, 85, 107);
+  color: #cfcfcf;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  .box4 {
+    width: 50%;
+    height: 300px;
+    background-image: url("../assets/IMG-20210101-WA0010.jpg");
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+    padding: 10px;
+    margin-top: 90px;
+  }
+
+  @include tablet() {
+    flex-direction: column;
+    padding: 45px 25px;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  &__textblock {
+    margin: 0 auto !important;
+    p {
+      color: rgb(207, 207, 207);
+    }
+  }
+
+  &__heading {
+    font-weight: 500;
+    font-size: 1.6rem;
+
+    @include tablet() {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__para {
+    color: rgb(207, 207, 207);
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    color: inherit;
+    font-weight: 300;
+
+    @include tablet() {
+      margin: 25px 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__icons {
+    margin-top: 35px;
+    text-align: center;
+
+    i {
+      font-size: 32px;
+      margin: 0 20px;
+    }
+  }
+}

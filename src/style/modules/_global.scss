@@ -1,0 +1,103 @@
+html {
+  margin: 0 auto;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $secondary;
+  // background: #fcfcfc;
+  background: #18202d;
+  color: $text-color;
+  position: relative;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h3 {
+  font-weight: 700;
+  font-family: $primary;
+}
+
+p {
+  padding: 5px;
+  font-weight: 100;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  font-weight: bold;
+}
+
+.center {
+  margin: 0 auto !important;
+  flex-basis: auto !important;
+  max-width: 600px !important;
+  width: 95%;
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+// TODO: Move this out of global
+.go-top {
+  height: 45px;
+  width: 45px;
+  border: none;
+  border-radius: 50%;
+  border: 2px solid #fbfbfb;
+  background: $pink;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  text-align: center;
+  line-height: 45px;
+  font-size: 1.5rem;
+  color: #fff;
+  transform: scale(0);
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.show-go-top {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0 !important;
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+
+.fadeIn {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
+
+.mobile-break {
+  display: none;
+
+  @include mobile() {
+    display: block;
+  }
+}
